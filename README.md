@@ -41,7 +41,7 @@ var mockFs = {
 describe('test.me usage example', function () {
   // we load our module with out mock instead of required `fs`
   var myModule = testMe('./myModule', {
-    fs: mockFs
+    fs: mockFs // “fs” here is file path string for “require” from “require('fs')”, not a variable name from “var fs = ”
   }, {
     __dirname: '/my/dir' // will be used as `__dirname` global by your script
   });
